@@ -56,6 +56,7 @@ func toCompletionItem(candidate lang.Candidate, snippet, markdown bool) lsp.Comp
 		Label:               candidate.Label,
 		Kind:                kind,
 		InsertTextFormat:    insertTextFormat(snippet),
+		Deprecated:          candidate.IsDeprecated,
 		Detail:              candidate.Detail,
 		Documentation:       doc,
 		TextEdit:            textEdit(candidate.TextEdit, snippet),
